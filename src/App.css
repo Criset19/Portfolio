@@ -1,0 +1,53 @@
+#root{
+  text-align: center; 
+  background-color: black;
+  color: white;
+  font-family: 'Sour Gummy';
+  font-weight: 250;
+}
+/* html{
+  background-color: black;
+}html::-webkit-scrollbar{
+  background: black;
+}html::-webkit-scrollbar-track {
+  width: 10px;
+
+}
+html::-webkit-scrollbar-thumb{
+  background-color: rgba(62, 57, 51, 0.7);
+  box-shadow: 0px 1px 15px rgba(255,255,255, 0.7),
+              0 -1px 15px rgba(255,255,255,0.7);
+  
+} */
+.navbar{
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  font-style:italic;
+
+}h1, h3{
+  font-weight: 300;
+}.body{
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding-bottom: 80px;
+  padding-top: 40px;
+}.about_section{
+  background-color: rgba(62, 57, 51, 0.7);
+
+  padding: 10px 30px;
+  border-radius: 10px;
+
+}
+.section{
+
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+  }

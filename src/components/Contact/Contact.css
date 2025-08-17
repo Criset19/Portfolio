@@ -1,0 +1,75 @@
+.contact_body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+}.find_me{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+}
+.find_me_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}.find_me_link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.find_me_link img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.reach_out{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px;
+}.contact_form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}.contact_form input, 
+ .contact_form textarea{
+    background-color:  rgba(62, 57, 51, 0.7);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    caret-color: white;
+    color: white;
+    font-family: 'Sour Gummy';
+}.contact_form input::placeholder, 
+ .contact_form textarea::placeholder{
+    color: rgb(255, 255, 255, 0.4);
+    padding-left: 10px;
+}
+
+
+.contact_form button{
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color: black;
+        transition: 0.12s;
+}.contact_form button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: 0.12s;
+}.contact_form button:active{
+    background-color: rgba(255, 255, 255, 0.312);
+    cursor: pointer;
+}
+

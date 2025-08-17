@@ -1,0 +1,38 @@
+.about_body{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 5rem;   
+    margin-bottom: 2rem;
+}.images{
+    position: relative;
+    height: 30rem;
+    top: 0px;
+    width: 50%;
+}.pic{
+    width: 60%;
+    height: auto;
+    border-radius: 10rem;
+    box-shadow: 0 0 20px black;
+}.pic1{
+    position: absolute;
+    top: 8%;
+    left: 45%;
+    z-index: 3;
+}.pic2{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    z-index: 2;
+}.pic3{
+    position: absolute;
+    top: 44%;
+    left: 37%;
+    z-index: 1;
+}
+.about_info{
+    position: relative;
+    width: 50%;
+
+
+}

@@ -1,0 +1,29 @@
+.navbar_body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 30px;
+    background-color: rgba(62, 57, 51, 0.7);
+    box-shadow: 0px 0px 10px white;
+}
+.navbar_list{
+    padding: 0 2rem 0 1rem;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}.navbar_title{
+    padding-left: 2rem;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    color: white;
+    text-decoration:none;
+    transition: 0.15s;
+}a:hover{
+    color: darkkhaki;
+    transition: 0.15s;
+}a:active{
+    color: rgb(106, 102, 36);
+}
