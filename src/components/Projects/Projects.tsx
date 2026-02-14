@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import  {useState} from 'react'
 import './Projects.css'
 import my_projects from '../../assets/projects'
 import type { project_type} from '../../assets/projects'
@@ -18,7 +18,7 @@ const Projects = () => {
                 setShowProject(null);
                 // document.body.style.overflow = ''; 
                 // document.body.style.paddingRight = '' 
-            }, 450);
+            }, 650); //ends 100 milliseconds earlier to prevent accidentally popping up again at end
     }
     
     return(
@@ -60,17 +60,18 @@ const Projects = () => {
                                 {showProject.description}
                             </div>
                             <div>
-                                <p className='popup_section'>Tech-Stack Used:</p>
-                                {showProject.tech_stack.map((tech) => (
-                                    <p>{tech}</p>
-                                ))}
-                            </div>
-                            <div>
                                 <p className='popup_section'>Link:</p> 
                                 {showProject.links? 
                                 <a href={showProject.links} target='blank'> Check It Out!! </a> 
                                 :<p>Coming Soon!!</p>}  
                             </div>
+                            <div>
+                                <p className='popup_section'>Tech-Stack Used:</p>
+                                {showProject.tech_stack.map((tech) => (
+                                    <p>{tech}</p>
+                                ))}
+                            </div>
+
                         </div>
                     </div>
                 </div>

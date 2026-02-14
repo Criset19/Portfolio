@@ -1,18 +1,66 @@
+import {useState} from 'react'
 import './aboutMe.css'
 import qualc from '../../assets/icons/pic2.jpg'
 import linked from '../../assets/icons/pic3.jpg'
 import grad from '../../assets/icons/pic5.png'
-
+import beach from '../../assets/icons/pic6.jpg'
+import rat from '../../assets/icons/Remy2.png'
+import drawing from '../../assets/icons/drawing.jpg'
+import broken from '../../assets/icons/broken.jpg'
 const AboutMe = () => {
+
+    
+    const [images] = useState<string[][]>([
+        [linked,"My LinkedIn pfp"], 
+        [grad, "Graduated at CSUSM where I obtained my Bachelors degree in Computer Science"],
+        [qualc, "This is me during a visit at Qualcomm for my Capstone class"],
+        // [rat, "My guy Remy"],
+        [drawing, "One of my hobbies includes drawing (Plus I like Dragon Ball)"],
+        [beach, "A picture of me taken at a foggy beach"]
+    ])
+    
+    //offset to rotate images rather then rotating array itself and avoid akward transitions
+    const [offset, setOffset] = useState(0);
+
+    const nextPhoto = () => {
+        setOffset(prev => (prev + 1) % images.length);
+    };
+    const prevPhoto = () => {
+        setOffset(prev => (prev - 1 + images.length) % images.length);
+    };
+
     return(
         <div className='about_body'>
+            
+            <div className='image_body'  >
+                <div className='images' >                
+                    {images.map(([src], index) => {
+                        //% images.length allows indexes to stay within range of amount of lenght of images (in this case index from 0 to 2 - up to 3)
+                        //index - offset -> allows for image at second index to becomes the first one
+                        //+ images.length -> prevents that subtraction gives a negative index and everything stays within 0 to 2
+                    const positionIndex = (index - offset + images.length) % images.length;
+                    
+                    return ( 
+                            <img key={src} src={src} className={`pic pic${
+                                (positionIndex >1 && positionIndex < images.length - 1) //second and last element -> left and right, so any in between will be hidden
+                                ?2
+                                :(positionIndex == images.length-1) //If > 4 images, last image will not be index 3, so we have to make sure it gets pic3 class from css
+                                ?3
+                                :positionIndex}`}/>
+                    );
+                    })}   
+                </div>
 
-            <div className='images'>
-                <img className='pic pic1' src={linked} />
-                <img className='pic pic2' src={grad} />
-                <img className='pic pic3' src={qualc} />
+                <div className='image_info'>
+                    <button style={{
+                        
+                    }}
+                    className='prev_button'onClick={prevPhoto}/>
+                    <p className='image_desc'>{images[offset][1]}</p>
+                    <button className='next_button' onClick={nextPhoto}/>    
+                </div>
+                
             </div>
-
             
             <div className='about_info'>            
                 <p>Hello there!!! My name is Cristian Enriquez and I'm a recent computer science graduate who is eager to apply the skills I've learned to solve real-world challenges and create meaningful solutions. <br /><br /></p>

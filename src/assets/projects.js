@@ -45,7 +45,15 @@ const my_projects = [
         image: temp,
         links: '',
         tech_stack: ['React', 'CSS', 'TypeScript', 'JavaScript']
-    },
+    },    
+    // {
+    //     id: 6,
+    //     title: 'Kanji Project',
+    //     description: 'An app for learning japanese kanji',
+    //     image: temp,
+    //     links: '',
+    //     tech_stack: []
+    // }
 ]
 
 export default my_projects;

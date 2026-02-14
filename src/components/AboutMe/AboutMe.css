@@ -4,35 +4,106 @@
     align-items: center; 
     gap: 5rem;   
     margin-bottom: 2rem;
-}.images{
+}.image_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30rem;
+   
+    width: 50%;
+}
+.images{
     position: relative;
     height: 30rem;
-    top: 0px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 120px rgba(255, 239, 239, 0.575);
+    z-index: 10;
+    border-radius: 15rem;
+}
+
+.image_info{
+   display: flex;
+   align-items: center;
+   height: 10%;
+   width: 100%;
+    margin-top: 3rem;
+}.next_button{
+    background: transparent;
+    border: 10px solid transparent;
+    border-left: 16px solid white ;
+}.next_button:hover{
+    border-left: 16px solid darkkhaki;
+    transition: 0.15s;
+    cursor: pointer;
+}.next_button:active{
+    border-left: 16px solid rgb(106, 102, 36);
+}.prev_button{
+    background: transparent;
+    border: 10px solid transparent;
+    border-right: 16px solid white ;
+}.prev_button:hover{
+    border-right: 16px solid darkkhaki;
+    transition: 0.15s;
+    cursor: pointer;
+}.prev_button:active{
+    border-right: 16px solid rgb(106, 102, 36);
+}
+
+.image_desc{
+    flex: 1;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.about_info{
+    position: relative;
     width: 50%;
-}.pic{
+}
+.pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 60%;
     height: auto;
     border-radius: 10rem;
     box-shadow: 0 0 20px black;
-}.pic1{
-    position: absolute;
-    top: 8%;
-    left: 45%;
+
+    /* Keep position of image centered regardless of scale */
+    transform-origin: center center;
+
+    transition:
+        transform 2s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 2s ease,
+        z-index 0s;
+}
+
+/* CENTER (front, biggest) */
+.pic0 {
+    transform: translate(-50%, -50%) translate(0rem, -10px) scale(1);
     z-index: 3;
-}.pic2{
-    position: absolute;
-    top: 25%;
-    left: 0;
-    z-index: 2;
-}.pic3{
-    position: absolute;
-    top: 44%;
-    left: 37%;
+    opacity: 1;
+}
+
+/* LEFT */
+.pic1 {
+    transform: translate(-50%, -50%) translate(-10rem, 40px) scale(0.4);
     z-index: 1;
+    opacity: 0.4;
 }
-.about_info{
-    position: relative;
-    width: 50%;
 
-
+/* RIGHT */
+.pic3 {
+    transform: translate(-50%, -50%) translate(10rem, 40px) scale(0.4);
+    z-index: 1;
+    opacity: 0.4;
 }
+
+/* BACK (hidden) */
+.pic2 {
+    transform: translate(-50%, -50%) translate(0rem, 80px) scale(0.2);
+    z-index: 0;
+    opacity: 0;
+}
+

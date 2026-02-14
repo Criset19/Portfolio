@@ -1,4 +1,3 @@
-import React from 'react'
 import './Contact.css'
 import gitLogo from '../../assets/icons/GitLogo.svg'
 import linkedInLogo from '../../assets/icons/InLogo.png'
@@ -17,7 +16,7 @@ const Contact = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "3ffd8ce0-3534-49d5-985c-f32bb3fda4ba");
+        formData.append("access_key", "8add725f-31ce-4b25-a613-9b92635297e1");
 
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);

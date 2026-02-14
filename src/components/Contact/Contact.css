@@ -63,13 +63,19 @@
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     color: black;
-        transition: 0.12s;
+    transition: 0.12s;
 }.contact_form button:hover{
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: 0.12s;
 }.contact_form button:active{
     background-color: rgba(255, 255, 255, 0.312);
+    color: rgb(255, 255, 255, 0.712);
     cursor: pointer;
+}.contact_form button:disabled{
+   background-color: rgba(255, 255, 255, 0.312);
+   color: rgb(255, 255, 255, 0.712);
 }
+
+
 

@@ -1,6 +1,6 @@
 .project_container{
     background-color:rgb(183, 187, 187);
-    box-shadow: 0 4px whitesmoke;
+    box-shadow: 0 4px 4px whitesmoke;
     max-width: 100%;
     margin: 0 auto 15px;
     
@@ -11,6 +11,8 @@
     list-style-type: none;
     box-shadow: 0 0 20px rgba(0, 0, 0);
     padding: 20px;
+    
+    justify-content: center;
 }.project_img{
     height: 100px;
     object-fit: cover;
@@ -40,9 +42,9 @@
     z-index: 190;
     
 }.fade_in{
-    animation: fadeIn 0.5s ease-in;
+    animation: fadeIn 0.75s ease-in;
 }.fade_out{
-    animation: fadeOut 0.5s ease-in;
+    animation: fadeOut 0.75s ease-in;
 }
 
 .popup_body{
@@ -62,9 +64,9 @@
     max-width: 20rem;
     max-height: 80vh;
 }.slide_in{
-    animation: slideIn 0.5s ease-in;
+    animation: slideIn 0.75s ease-in;
 }.slide_out{
-    animation: slideOut 0.5s ease-in;
+    animation: slideOut 0.75s ease-in;
 }
 .close_btn{
     cursor: pointer;
