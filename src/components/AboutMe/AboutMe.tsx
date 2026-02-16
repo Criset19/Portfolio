@@ -4,7 +4,6 @@ import qualc from '../../assets/icons/pic2.jpg'
 import linked from '../../assets/icons/pic3.jpg'
 import grad from '../../assets/icons/pic5.png'
 import beach from '../../assets/icons/pic6.jpg'
-import rat from '../../assets/icons/Remy2.png'
 import drawing from '../../assets/icons/drawing.jpg'
 const AboutMe = () => {
 
