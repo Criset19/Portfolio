@@ -43,7 +43,7 @@ const my_projects = [
         title: 'Portfolio Website',
         description: 'The website you are currently visiting!!',
         image: temp,
-        links: '',
+        links: 'https://Criset19.github.io/Portfolio',
         tech_stack: ['React', 'CSS', 'TypeScript', 'JavaScript']
     }
 ]

@@ -4,12 +4,17 @@
     align-items: center; 
     gap: 5rem;   
     margin-bottom: 2rem;
-}.image_body{
+}
+.about_info{
+    position: relative;
+    width: 50%;
+}
+
+.image_body{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 30rem;
-   
     width: 50%;
 }
 .images{
@@ -23,47 +28,6 @@
     z-index: 10;
     border-radius: 15rem;
     margin-top: 1.5rem;
-}
-
-.image_info{
-   display: flex;
-   align-items: center;
-   height: 10%;
-   width: 100%;
-    margin-top: 3rem;
-}.next_button{
-    background: transparent;
-    border: 10px solid transparent;
-    border-left: 16px solid white ;
-    
-}.next_button:hover{
-    border-left: 16px solid darkkhaki;
-    transition: 0.15s;
-    cursor: pointer;
-}.next_button:active{
-    border-left: 16px solid rgb(106, 102, 36);
-}.prev_button{
-    background: transparent;
-    border: 10px solid transparent;
-    border-right: 16px solid white ;
-}.prev_button:hover{
-    border-right: 16px solid darkkhaki;
-    transition: 0.15s;
-    cursor: pointer;
-}.prev_button:active{
-    border-right: 16px solid rgb(106, 102, 36);
-}
-
-.image_desc{
-    flex: 1;
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.about_info{
-    position: relative;
-    width: 50%;
 }
 .pic {
     position: absolute;
@@ -109,4 +73,60 @@
     z-index: 0;
     opacity: 0;
 }
+.image_info{
+   display: flex;
+   align-items: center;
+   height: 10%;
+   width: 100%;
+    margin-top: 3rem;
+}.next_button{
+    background: transparent;
+    border: 10px solid transparent;
+    border-left: 16px solid white ;
+    
+}.next_button:hover{
+    border-left: 16px solid darkkhaki;
+    transition: 0.15s;
+    cursor: pointer;
+}.next_button:active{
+    border-left: 16px solid rgb(106, 102, 36);
+}.prev_button{
+    background: transparent;
+    border: 10px solid transparent;
+    border-right: 16px solid white ;
+}.prev_button:hover{
+    border-right: 16px solid darkkhaki;
+    transition: 0.15s;
+    cursor: pointer;
+}.prev_button:active{
+    border-right: 16px solid rgb(106, 102, 36);
+}
 
+.image_desc{
+    flex: 1;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .about_body {
+        flex-direction: column; /* mobile */
+        gap: 2rem;
+        margin-bottom: 0;
+    }
+    .about_info{
+        position: relative;
+        width: 100%;
+    }
+    .image_body{
+        height: 22rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        
+    }
+}

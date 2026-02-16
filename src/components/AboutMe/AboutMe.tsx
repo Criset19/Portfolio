@@ -15,7 +15,7 @@ const AboutMe = () => {
         [qualc, "A picture taken of me during a visit at Qualcomm for my Capstone class"],
         // [rat, "My guy Remy"],
         [drawing, "Fun Fact: One of my hobbies includes drawing and I like Dragon Ball"],
-        [beach, "A picture of me taken at a foggy beach"]
+        [beach, "At a foggy beach"]
     ])
     
     //offset to rotate images rather then rotating array itself and avoid akward transitions
@@ -31,6 +31,13 @@ const AboutMe = () => {
     return(
         <div className='about_body'>
             
+            <div className='about_info'>            
+                <p>Hello there!!! My name is Cristian Enriquez and I'm a recent computer science graduate who is eager to apply the skills I've learned to solve real-world challenges and create meaningful solutions. <br /><br /></p>
+                <p>I’ve developed a few full-stack web and android applications using technologies such as JavaScript, React, Spring Boot, Node.js, Kotlin, and MySQL. Alongside that, I’m exploring the world of machine learning through projects involving Python, TensorFlow, and scikit-learn. <br /><br /></p>
+                <p>As such, I'm currently seeking opportunities to get involved in web or mobile development, as well as in ML/DL environments where I can grow, contribute, and keep learning. <br /><br /></p>
+                <p>If you share similar interests or are working on exciting projects, let’s connect!</p>
+            </div>
+
             <div className='image_body'  >
                 <div className='images' >                
                     {images.map(([src], index) => {
@@ -58,12 +65,7 @@ const AboutMe = () => {
                 
             </div>
             
-            <div className='about_info'>            
-                <p>Hello there!!! My name is Cristian Enriquez and I'm a recent computer science graduate who is eager to apply the skills I've learned to solve real-world challenges and create meaningful solutions. <br /><br /></p>
-                <p>I’ve developed a few full-stack web and android applications using technologies such as JavaScript, React, Spring Boot, Node.js, Kotlin, and MySQL. Alongside that, I’m exploring the world of machine learning through projects involving Python, TensorFlow, and scikit-learn. <br /><br /></p>
-                <p>As such, I'm currently seeking opportunities to get involved in web or mobile development, as well as in ML/DL environments where I can grow, contribute, and keep learning. <br /><br /></p>
-                <p>If you share similar interests or are working on exciting projects, let’s connect!</p>
-            </div>
+            
 
         </div>
 
