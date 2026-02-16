@@ -17,9 +17,12 @@
     height: 30rem;
     width: 100%;
     overflow: hidden;
-    box-shadow: inset 0px 0px 120px rgba(255, 239, 239, 0.575);
+    box-shadow: inset 0px 0px 30px 2px rgba(255, 255, 255, 0.175),
+       0 0 20px -5px rgb(255, 255, 255);
+    
     z-index: 10;
     border-radius: 15rem;
+    margin-top: 1.5rem;
 }
 
 .image_info{
@@ -32,6 +35,7 @@
     background: transparent;
     border: 10px solid transparent;
     border-left: 16px solid white ;
+    
 }.next_button:hover{
     border-left: 16px solid darkkhaki;
     transition: 0.15s;
@@ -69,7 +73,6 @@
     height: auto;
     border-radius: 10rem;
     box-shadow: 0 0 20px black;
-
     /* Keep position of image centered regardless of scale */
     transform-origin: center center;
 
@@ -87,14 +90,14 @@
 }
 
 /* LEFT */
-.pic1 {
+.pic3 {
     transform: translate(-50%, -50%) translate(-10rem, 40px) scale(0.4);
     z-index: 1;
     opacity: 0.4;
 }
 
 /* RIGHT */
-.pic3 {
+.pic1 {
     transform: translate(-50%, -50%) translate(10rem, 40px) scale(0.4);
     z-index: 1;
     opacity: 0.4;

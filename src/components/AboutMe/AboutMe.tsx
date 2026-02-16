@@ -6,16 +6,15 @@ import grad from '../../assets/icons/pic5.png'
 import beach from '../../assets/icons/pic6.jpg'
 import rat from '../../assets/icons/Remy2.png'
 import drawing from '../../assets/icons/drawing.jpg'
-import broken from '../../assets/icons/broken.jpg'
 const AboutMe = () => {
 
     
     const [images] = useState<string[][]>([
         [linked,"My LinkedIn pfp"], 
         [grad, "Graduated at CSUSM where I obtained my Bachelors degree in Computer Science"],
-        [qualc, "This is me during a visit at Qualcomm for my Capstone class"],
+        [qualc, "A picture taken of me during a visit at Qualcomm for my Capstone class"],
         // [rat, "My guy Remy"],
-        [drawing, "One of my hobbies includes drawing (Plus I like Dragon Ball)"],
+        [drawing, "Fun Fact: One of my hobbies includes drawing and I like Dragon Ball"],
         [beach, "A picture of me taken at a foggy beach"]
     ])
     
@@ -35,16 +34,16 @@ const AboutMe = () => {
             <div className='image_body'  >
                 <div className='images' >                
                     {images.map(([src], index) => {
-                        //% images.length allows indexes to stay within range of amount of lenght of images (in this case index from 0 to 2 - up to 3)
+                        //% images.length allows indexes to stay within range of amount of lenght of images
                         //index - offset -> allows for image at second index to becomes the first one
-                        //+ images.length -> prevents that subtraction gives a negative index and everything stays within 0 to 2
+                        //+ images.length -> prevents that subtraction gives a negative index and everything stays within 0 to 3 range
                     const positionIndex = (index - offset + images.length) % images.length;
                     
                     return ( 
                             <img key={src} src={src} className={`pic pic${
                                 (positionIndex >1 && positionIndex < images.length - 1) //second and last element -> left and right, so any in between will be hidden
                                 ?2
-                                :(positionIndex == images.length-1) //If > 4 images, last image will not be index 3, so we have to make sure it gets pic3 class from css
+                                :(positionIndex == images.length-1) //If we have > 4 images, last image will not be index 3, so we have to make sure it gets pic3 class from css
                                 ?3
                                 :positionIndex}`}/>
                     );
@@ -52,10 +51,7 @@ const AboutMe = () => {
                 </div>
 
                 <div className='image_info'>
-                    <button style={{
-                        
-                    }}
-                    className='prev_button'onClick={prevPhoto}/>
+                    <button className='prev_button'onClick={prevPhoto}/>
                     <p className='image_desc'>{images[offset][1]}</p>
                     <button className='next_button' onClick={nextPhoto}/>    
                 </div>

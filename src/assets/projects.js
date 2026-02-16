@@ -30,14 +30,14 @@ const my_projects = [
         links: 'https://github.com/Starfox-inc/Starfox-Wiki',
         tech_stack: ['MySql', 'HTML', 'CSS', 'Java', 'SpringBoot', 'Gradle', 'Thymeleaf', 'PandaScore API']
     },
-    {
-        id: 2,
-        title: 'Ratatouille AI',
-        description: 'An android app that leverages the Gemini API to integrate a chatbot acting act as Remy\'s character from the movie Ratatouille via prompt engineering. Users can also create recipes through Gemini\'s LLM as well as discover some famous recipes from the movie',
-        image: img2,
-        links: null,
-        tech_stack: ['React-Native', 'Gemini API']
-    },
+    // {
+    //     id: 2,
+    //     title: 'Ratatouille AI',
+    //     description: 'An android app that leverages the Gemini API to integrate a chatbot acting act as Remy\'s character from the movie Ratatouille via prompt engineering. Users can also create recipes through Gemini\'s LLM as well as discover some famous recipes from the movie',
+    //     image: img2,
+    //     links: null,
+    //     tech_stack: ['React-Native', 'Gemini API']
+    // },
     {
         id: 5,
         title: 'Portfolio Website',
@@ -45,15 +45,7 @@ const my_projects = [
         image: temp,
         links: '',
         tech_stack: ['React', 'CSS', 'TypeScript', 'JavaScript']
-    },    
-    // {
-    //     id: 6,
-    //     title: 'Kanji Project',
-    //     description: 'An app for learning japanese kanji',
-    //     image: temp,
-    //     links: '',
-    //     tech_stack: []
-    // }
+    }
 ]
 
 export default my_projects;
